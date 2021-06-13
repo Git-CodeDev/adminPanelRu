@@ -35,7 +35,8 @@ export default class Login extends Component {
                     className="uk-input uk-margin-top" 
                     placeholder="Пароль"
                     value={pass}
-                    onChange={(e) => this.onPasswordChange(e)}></input>
+                    onChange={(e) => this.onPasswordChange(e)}
+                    onKeyUp={(key) => {if (key.keyCode === 13) {login(pass)}}}></input>
                     {renderLogErr}
                     {renderLengthErr}
                     <button  
